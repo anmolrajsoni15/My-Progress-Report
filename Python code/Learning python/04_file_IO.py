@@ -1,0 +1,7 @@
+f = open("my_intro.txt", "r+")
+# content = f.read()
+# print(content)
+# print(f.readline())
+print(f.read())
+f.write("\nBye Bye")
+f.close()

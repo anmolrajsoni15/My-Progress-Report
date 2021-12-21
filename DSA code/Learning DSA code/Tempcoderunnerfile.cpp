@@ -1,0 +1,1 @@
+ binary_search(arr, size, element);
