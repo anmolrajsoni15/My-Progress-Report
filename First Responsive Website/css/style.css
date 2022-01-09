@@ -1,0 +1,436 @@
+/* CSS Reset */
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+header{
+    display: flex;
+    align-items:center;
+    justify-content: space-between;
+    position: fixed;
+    top: 0px;
+    border-bottom: 1px solid rgb(235, 182, 114);
+    height: 100px;
+    width: 100%;
+    /* flex-wrap: wrap; */
+}
+
+header::before{
+    content: "";
+    background-color: rgb(250, 187, 14);
+    position: absolute;
+    top:0;
+    left:0;
+    height: 100%;
+    width:100%;
+    z-index: -1;
+}
+
+#img{
+    display: none;
+}
+
+#navbar{
+    display: flex;
+    align-items: center;
+    width: 500px;
+}
+
+#navbar ul{
+    display: flex;
+    font-family: 'Baloo Bhai', cursive;
+}
+
+#navbar ul li{
+    list-style: none;
+    font-size: 1.12rem;
+}
+
+#navbar ul li a{
+    display: block;
+    text-decoration: none;
+    margin: 3px 20px;
+    padding: 2px 6px;
+    font-size: 1.2rem;
+    /* border: 1px solid green; */
+    border-radius: 8px;
+    transition: all .3s;
+}
+
+#navbar ul li a:hover{
+    background-color: rgb(247, 201, 74);
+    text-decoration: underline;
+    padding: 2px 8px;
+    font-size: 1.3rem;
+    z-index: 10;
+}
+
+/* #logo{
+    background-color: aquamarine;
+}
+
+#logo img{
+    height: 60px;
+    margin: 3px 6px;
+} */
+
+#bars{
+    display: none;
+}
+/* -------------------------------------------- */
+
+
+#logo{
+    display: flex;
+    justify-content:flex-start;
+    align-items:flex-start;
+    padding-top: 30px;
+    margin: 0px 15px;
+    /* min-height: 100vh; */
+    /*background: black; */
+}
+
+.cube{
+    position: relative;
+    width: 100px;
+    height: 100px;
+    margin: 20px 20px;
+    transform-style: preserve-3d;
+    transform: rotateX(-20deg);
+    animation: animate 8s linear infinite;
+}
+
+@keyframes animate{
+    0%{
+        transform: rotateX(-10deg) rotateY(0deg);
+    }
+    100%{
+        transform: rotateX(-10deg) rotateY(-360deg);
+    }
+}
+.cube div{
+    position: absolute;
+    /* top: 0;
+    left: 0; */
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+}
+
+
+.cube div span{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(#62f5ff, #016674);
+    transform: rotateY(calc(90deg * var(--i))) translateZ(50px);
+    box-shadow: 0 0 10px #62f5ff,
+                0 0 20px #3aebf8,
+                0 0 30px #1cf0ff;
+}
+
+.top{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100px;
+    height: 100px;
+    background: radial-gradient(#62f5ff, #016674);
+    transform: rotateX(90deg) translateZ(50px);
+    box-shadow: 0 0 10px #62f5ff,
+                0 0 20px #3aebf8,
+                0 0 30px #1cf0ff;
+}
+
+.bottom{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100px;
+    height: 100px;
+    background: radial-gradient(#62f5ff, #016674);
+    transform: rotateX(90deg) translateZ(-50px);
+    box-shadow: 0 0 10px #62f5ff,
+                0 0 20px #3aebf8,
+                0 0 30px #1cf0ff;
+}
+
+span{
+    display: flex;
+    font-size: 20px;
+    font-family: 'Fredoka One', cursive;
+    font-weight: bolder;
+    justify-content: center;
+    align-items: center;
+}
+
+#image{
+    height: 80px;
+    width: 113px;
+}
+/* -------------------------------------------- */
+
+#input{
+    text-align: center;
+    border: none;
+    border-radius: 3px;
+    width: 261px;
+    height: 27px;
+}
+
+#searchIcon{
+    background-color: rgb(11, 118, 241);
+    color: rgb(223, 223, 241);
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
+    width: 48px;
+    height: 27px;
+}
+
+.btn{
+    width: 75px;
+    height: 28px;
+    /* margin-top: 14px; */
+    margin-right: 51px;
+    border: none;
+    background: tomato;
+    border-radius: 7px;
+    font-weight: bolder;
+}
+
+.btn:hover{
+    background: red;
+    color: white;
+    cursor: pointer;
+}
+
+#home{
+    display: flex;
+    position: relative;
+    height: 500px;
+    justify-content: flex-end;
+    align-items: center;
+    z-index: -1;
+}
+
+#home::before{
+    content: "";
+    position: absolute;
+    background: url('../header.jpg') no-repeat center center/cover;
+    height: 400px;
+    width: 101%;
+    z-index: -2;
+    top: 100px;
+}
+
+#home h1{
+    color: white;
+    margin-right: 50px;
+    font-size: 2.8rem;
+    text-align: center;
+}
+
+#products-container{
+    background-color: rgb(48, 48, 48);
+}
+
+#products{
+    margin: 35px;
+    margin-top: 25px;
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 0px;
+    /* background-color: grey; */
+}
+
+
+#products-container h1{
+    color: rgb(250, 187, 14);
+    padding-left: 20px;
+    font-size: 3rem;
+    text-decoration:underline;
+}
+#products .box{
+    border: 2px solid rgb(19, 61, 252);
+    padding: 3px;
+    margin: 4px 40px;
+    margin-bottom: 15px;
+    border-radius: 30px;
+    background-color: rgb(226, 223, 223);
+    transition: all 0.4s;
+}
+
+.box:hover{
+    box-shadow: 0 0 20px rgb(19, 61, 252);
+}
+
+.box{
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    align-items: center;
+    justify-content: center;
+}
+
+.box img{
+    width: 150px;
+    padding-bottom: 10px;
+}
+
+.box #tyreproduct{
+    width: 200px;
+    height: 200px;
+}
+
+
+.brands{
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.brands img{
+    margin: 5px 10px;
+    width: 115px;
+}
+
+
+#aboutUs{
+    display: flex;
+    position: absolute;
+    top: 950px;
+    height: 500px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: black;
+    z-index: -1;
+}
+
+#aboutUs::before{
+    content: "";
+    position: absolute;
+    background: url('../shop.jpg') no-repeat center center/cover;
+    opacity: 0.5;
+    height: 500px;
+    width: 100%;
+    z-index: 0;
+    top: 0px;
+}
+
+#aboutUs p{
+    color: aliceblue;
+    font-size: 1.35rem;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    z-index: 2;
+    text-align: center;
+    text-shadow: 0 0 5px rgba(19, 62, 252, 0.781), 0 0 8px rgba(19, 62, 252, 1);
+}
+
+#aboutUs h1{
+    z-index: 2;
+    color: rgb(250, 187, 14);
+    font-size: 3rem;
+    text-decoration: underline;
+}
+
+.h-primary{
+    font-family: 'Baloo Bhai', cursive;
+    text-shadow: 0 0 10px rgb(250 187 14 / 40%), 
+                0 0 15px rgb(250 187 14 / 80%), 
+                0 0 20px rgb(250 187 14);
+}
+.h-secondary{
+    font-family: 'Bree Serif', serif;
+}
+.center{
+    text-align: center;
+}
+
+#contactus{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    top: 500px;
+    height: 500px;
+    color: white;
+    background: linear-gradient(rgba(0, 0, 0, 0.692), rgba(0, 0, 0, 0.938));
+}
+
+#contactus img
+{
+    position: absolute;
+    width: 500px;
+    left: 44%;
+    top: 37%;
+}
+
+#loc{
+    width: 500px;
+}
+
+#copyright{
+    text-align: center;
+    margin-top: 10px;
+}
+
+.socialmedia{
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.socialmedia li a {
+    padding: 15px;
+    font-size: 30px;
+    width: 30px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 50%;
+    color: azure;
+    background: rgb(236, 172, 52);
+    margin: 5px 10px;
+    transition: all 0.3s;
+  }
+
+.contactdetails span{
+    font-size: 1.3rem;
+    font-family: 'Baloo Bhai', cursive;
+    padding: 2px 0px;
+    color: azure;
+    margin-left: 10px;
+    text-align: left;
+    justify-content: flex-start;
+}
+
+.contact{
+    margin-left: 20px;
+    font-family: 'Bree Serif', serif;
+    padding: 2px 5px;
+}
+
+.socialmedia li #instagram:hover{
+    font-size: 35px;
+    width: 35px;
+    background: linear-gradient(#8a3ab9, #cd486b, #fbad50, #fccc63)
+}
+
+.socialmedia li #facebook:hover{
+    font-size: 35px;
+    width: 35px;
+    background:#4267B2;
+}
+
+.socialmedia li #twitter:hover{
+    font-size: 35px;
+    width: 35px;
+    background: #00acee;
+}

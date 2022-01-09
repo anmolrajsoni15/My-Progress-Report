@@ -1,0 +1,151 @@
+header{
+    /* flex-wrap: wrap; */
+    flex-direction: column;
+    position: sticky;
+    height: 140px;
+}
+
+#logo{
+    display: none;
+}
+
+#img{
+    display: inline-block;
+    position: absolute;
+    top: 0px;
+    /* border: 2px solid red; */
+    border-left: 2px solid rgb(126, 5, 5);
+    border-right: 2px solid rgb(126, 5, 5);
+    border-bottom: 2px solid rgb(126, 5, 5);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    background: rgb(141, 5, 5);
+    left: 8px;
+    box-shadow: 0 5px 5px rgb(46, 2, 2);
+}
+
+#img img{
+    width: 160px;
+    height: 70px;
+    padding-bottom: 0px;
+    
+    
+}
+
+#navbar{
+    position: relative;
+    width: 450px;
+    justify-content: center;
+    align-items: center;
+    top: 70px;
+}
+
+#navbar ul li{
+    padding: 0px;
+    margin: 0px 5px;
+}
+
+#navbar ul li a{
+    padding: 2px 0px;
+    /* font-size: 10px; */
+    margin: 3px 10px;
+    font-size: 20px;
+}
+
+.box{
+    width: 300px;
+}
+
+#aboutUs{
+    top: 734px;
+}
+
+@media only screen and (max-width: 510px) {
+    #navbar{
+        width: 350px;
+        justify-content: center;
+    }
+
+    #navbar ul li{
+        margin: 0px 1px;
+    }
+
+    #navbar ul li a{
+        font-size: 17px;
+    }
+
+    #products{
+        flex-direction: column;
+        align-items: center;
+        padding: 0px;
+        margin: 0px;
+    }
+    .box{
+        width: 280px;
+    }
+    #aboutUs{
+        top: 1028px;
+    }
+}
+
+.btn{
+    position: absolute;
+    top: 20px;
+    right: -37px;
+    width: 55px;
+    height: 22px;
+    padding: 2px 4px;
+    font-size: 13px;
+    font-weight: lighter;
+    font-family: 'Baloo Bhai', cursive;
+}
+
+#products .box{
+    margin: 8px 30px;
+    margin-bottom: 16px;
+    box-shadow: 0 0 20px rgb(19, 61, 252);
+}
+
+.box img{
+    width: 130px;
+}
+
+.box #tyreproduct{
+    width: 151px;
+    height: 171px;
+}
+
+.brands img{
+    width: 100px;
+}
+
+#search{
+    position: relative;
+    top: 25px;
+}
+
+#home{
+    height: 189px;
+}
+
+#home::before{
+    height: 190px;
+    top: -1px;
+}
+
+#home h1{
+    font-size: 2.08rem;
+    margin-right: 13px;
+}
+
+#products-container h1{
+    font-size: 2.5rem;
+}
+
+#contactus img
+{
+    position: absolute;
+    width: 300px;
+    left: 14%;
+    top: 57%;
+}
